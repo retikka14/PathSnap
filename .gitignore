@@ -1,0 +1,11 @@
+# Local data and generated caches
+data/
+outputs/diagnostics/*.png
+__pycache__/
+*.pyc
+.pytest_cache/
+.pytest-tmp/
+
+# Virtual environments
+.venv/
+venv/
