@@ -1,0 +1,17 @@
+{
+  "trip": "00000087",
+  "observations": 1399,
+  "road_arcs": 107451,
+  "reference_arcs": 455,
+  "candidate_coverage_proxy": 0.9592566118656183,
+  "median_nearest_candidate_m": 4.359325310890814,
+  "p95_nearest_candidate_m": 14.674788612027054,
+  "median_nearest_reference_m": 4.7475039841137425,
+  "p95_nearest_reference_m": 14.555811731534472,
+  "reference_within_25m_fraction": 0.9964260185847034,
+  "reference_within_50m_fraction": 1.0,
+  "sampled_exact_search_points": 120,
+  "sampled_midpoint_search_miss_fraction": 0.03333333333333333,
+  "sampled_midpoint_excess_distance_m_p95": 0.0,
+  "note": "Coverage uses heuristic monotonic labels; exact-search diagnostic is sampled, not a full replacement."
+}
