@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PathSnap | GPS Route Reconstruction</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div><span class="eyebrow">ML-ASSISTED MAP MATCHING</span><h1>PathSnap</h1><p>From noisy GPS observations to road-network trajectories</p></div>
+    <div id="connection" class="connection" role="status">Not connected</div>
+  </header>
+  <main>
+    <section class="panel controls" aria-label="Prediction controls">
+      <label for="api">Backend URL</label>
+      <input id="api" type="url" value="http://localhost:8000" placeholder="http://192.168.1.10:8000">
+      <button id="connect" type="button">Connect</button>
+      <label for="trip">Trip</label>
+      <select id="trip" aria-label="Trip ID"><option value="">Connect first</option></select>
+      <button id="predict" type="button" disabled>Reconstruct route</button>
+    </section>
+    <section class="metrics" aria-label="Trip summary">
+      <div class="panel metric"><span>Trip</span><strong id="trip-id">—</strong></div>
+      <div class="panel metric"><span>GPS observations</span><strong id="observations">—</strong></div>
+      <div class="panel metric"><span>Decoded arc assignments</span><strong id="matches">—</strong></div>
+    </section>
+    <section class="panel map-panel">
+      <div class="map-head"><div><h2>Route visualization</h2><p>Canvas projection of returned latitude/longitude coordinates (not a geographic basemap)</p></div>
+      <div class="layers"><label><input type="checkbox" id="show-gps" checked> GPS</label><label><input type="checkbox" id="show-route" checked> Predicted segments</label><button id="reset" type="button">Reset view</button></div></div>
+      <div class="legend"><span><i class="swatch gps"></i> Raw GPS</span><span><i class="swatch route"></i> Viterbi road segments</span><span><i class="swatch start"></i> Start</span><span><i class="swatch end"></i> End</span></div>
+      <canvas id="map" width="1200" height="600" role="img" aria-label="Raw GPS points and predicted road segments"></canvas>
+      <p id="status" role="status" aria-live="polite">Connect to the backend to load available trips.</p>
+    </section>
+    <p class="footnote">Inference is performed by FastAPI. Reference-route labels are not used during prediction. Segment drawings do not imply independently verified route accuracy.</p>
+  </main>
+</body>
+</html>
