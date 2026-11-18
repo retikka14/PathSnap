@@ -1,0 +1,17 @@
+{
+  "best_baseline": "random_forest",
+  "best_bayesian_params": {
+    "family": "extra_trees",
+    "trees": 88,
+    "depth": 9,
+    "min_leaf": 4
+  },
+  "bayesian_validation_macro_f1": 0.6825038545430635,
+  "tuned_student_metrics": {
+    "macro_f1": 0.6640551979019131,
+    "log_loss": 0.28584432072890986,
+    "top1_accuracy": 0.4788695877625097,
+    "inference_seconds": 0.0134257500003514
+  },
+  "warning": "Labels derived heuristically from chronological reference route; metrics are proxy estimates, not verified observation truth."
+}
