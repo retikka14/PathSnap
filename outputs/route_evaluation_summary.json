@@ -1,0 +1,18 @@
+{
+  "candidate_coverage_proxy": 0.7261059897585668,
+  "raw_weak_label_accuracy_on_covered": 0.552373537465783,
+  "viterbi_weak_label_accuracy_on_covered": 0.706606056714422,
+  "raw_connected_step_fraction": 0.7753632450634336,
+  "viterbi_connected_step_fraction": 0.9645907649297703,
+  "raw_reference_arc_recall_set": 0.7533059817441752,
+  "viterbi_reference_arc_recall_set": 0.8965692132033791,
+  "raw_unique_arcs": 481.8,
+  "viterbi_unique_arcs": 440.7,
+  "reference_unique_arcs": 349.1,
+  "trip_count": 10,
+  "limitations": [
+    "Weak-label accuracy is a proxy, not independently annotated per-point accuracy.",
+    "Reference-arc recall ignores segment order and extra predicted arcs.",
+    "Connected-step fraction tests direct adjacency, not full road-network path feasibility."
+  ]
+}
